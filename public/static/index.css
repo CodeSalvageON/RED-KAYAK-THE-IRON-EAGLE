@@ -1,0 +1,56 @@
+@font-face {
+  font-family: VHSSEX;
+  src: url("/static/vhs.ttf");
+}
+
+body {
+  font-family: VHSSEX;
+  background-color: black;
+}
+
+#theriver {
+  top: 0; 
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 600px;
+  height: 500px;
+  background-color: black;
+  margin: auto;
+  position: absolute;
+}
+
+#cover {
+  display: block;
+}
+
+#menu {
+  top: 150px;
+  position: absolute;
+}
+
+.display {
+  width: 600px;
+  height: 500px;
+  position: relative;
+  display: none;
+}
+
+.bg {
+  width: 600px;
+  height: 500px;
+}
+
+.menu-btn {
+  width: 225px;
+  font-size: 45px;
+  padding: 10px;
+  background-color: #FFFF;
+  transition: width 100ms ease-in-out;
+  box-shadow: 5px 10px 18px black;
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+  width: 250px;
+}
