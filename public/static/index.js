@@ -13,6 +13,7 @@ function playSound (sound, repeat) {
 // Animation stuff 
 const theRiver = document.getElementById("theriver");
 function switchScreen (sec1, sec2) {
+  isDisabled = 1;
   document.getElementById(sec1).style.display = "none";
   theRiver.style.backgroundColor = "red";
 
@@ -25,8 +26,9 @@ function switchScreen (sec1, sec2) {
       theRiver.style.backgroundColor = "red";
 
       setTimeout(function () {
-        sdocument.getElementById(sec2).style.display = "block";
+        document.getElementById(sec2).style.display = "block";
         theRiver.style.backgroundColor = "black";
+        isDisabled = 0;
       }, 50);
     }, 50);
   }, 50);
@@ -52,15 +54,30 @@ setInterval(function () {
   }
 }, 10000);
 
+// Interactive functions 
+function checkDisabled () {
+  switch (isDisabled) {
+    case 0:
+      break;
+    case 1:
+      return false;
+      break;
+  }
+}
+
 // Button interactions
+let isDisabled = 0;
+
 const enAudioMenu = document.getElementById("enaudiomenu");
 const newGame = document.getElementById("new");
 
 enAudioMenu.onclick = function () {
+  checkDisabled();
   playSound("track1", 0);
   enAudioMenu.style.display = "none";
 }
 
 newGame.onclick = function () {
+  checkDisabled();
   switchScreen("cover", "cutscene1");
 }
