@@ -17,7 +17,8 @@
   <body>
     <section id="theriver">
       <section id="cover" class="display">
-        <img src="/static/REDKAYAK.PNG" class="bg">
+        <img src="/static/REDKAYAK.PNG" class="bg" id="coverbg" />
+        <img src="/static/title.png" id="dasTitle"/>
         <section id="menu" oncopy="return false;">
           <section class="menu-btn" id="new">
             WITNESS
@@ -26,7 +27,15 @@
             CONTINUE
           </section>
         </section>
+        <section id="enaudiomenu">
+          ENABLE MUSIC
+        </section>
       </section>
+      <section id="cutscene1" class="display"></section>
     </section>
+
+    <audio src="/static/track1.mp3" id="track1" loop></audio>
+
+    <script src="/static/index.js"></script>
   </body>
 </html>
