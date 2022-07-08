@@ -52,7 +52,7 @@ setInterval(function () {
       switchScreenMenu = 0;
       break;
   }
-}, 10000);
+}, 5000);
 
 // Interactive functions 
 function checkDisabled () {
