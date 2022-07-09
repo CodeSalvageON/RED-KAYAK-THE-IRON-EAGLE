@@ -10,6 +10,18 @@ function playSound (sound, repeat) {
   }
 }
 
+function stopSound (id) {
+  document.getElementById(id).pause();
+}
+
+function fadeSound (id) {
+  $("#" + String(id)).animate({volume : 0.0}, 3000);
+} 
+
+function fadeInSound (id) {
+  $("#" + String(id)).animate({volume : 1.0}, 3000);
+}
+
 // Animation stuff 
 const theRiver = document.getElementById("theriver");
 function switchScreen (sec1, sec2) {
@@ -61,7 +73,6 @@ function checkDisabled () {
       break;
     case 1:
       return false;
-      break;
   }
 }
 
@@ -80,4 +91,5 @@ enAudioMenu.onclick = function () {
 newGame.onclick = function () {
   checkDisabled();
   switchScreen("cover", "cutscene1");
+  fadeSound("track1");
 }
