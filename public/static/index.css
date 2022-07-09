@@ -19,7 +19,6 @@ body {
   background-color: black;
   margin: auto;
   position: absolute;
-  overflow-y: auto;
 }
 
 #cover {
@@ -98,4 +97,5 @@ body {
   top: 230px;
   background-color: white;
   font-size: 18px;
+  position: absolute;
 }

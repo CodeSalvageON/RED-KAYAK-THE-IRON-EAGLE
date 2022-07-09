@@ -1,3 +1,18 @@
+// General stuff
+function waitForElement (id, callback){
+  let pop = setInterval(function () {
+    if (document.getElementById(id)) {
+      clearInterval(pop);
+      callback();
+    }
+  }, 100);
+}
+
+theRiver.style.display = "none";
+waitForElement("theriver", function () {
+  theRiver.style.display = "block";
+});
+
 // Audio stuff
 function playSound (sound, repeat) {
   switch (repeat) {
